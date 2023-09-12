@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main %}
+<header1>
+ <h2>Age - Streaming Service - Hours listening</h2>
+</header1>
+
+<table>
+  <thead>
+    <tr> 
+      <th>ID</th>
+      <th>Age</th>
+      <th>Primary streaming service</th>
+      <th>Hours per day</th>
+     
+    </tr>    
+  </thead>
+  <tbody>
+    {% for ID in tags %}
+    <tr>
+      <td>{{ ID[0] }}</td>
+      <td>{{ ID[1] }}</td>
+      <td>{{ ID[2] }}</td>
+      <td>{{ ID[3] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+  
+</table>
+
+<p>This page shows the ID, Age, Primary Streaming Service and how many hours the person listens to music per day. </p>
+
+
+
+
+{% endblock %} 

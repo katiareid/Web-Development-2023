@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h2>{{ title }}</h2>
+<h2>{{ sort }}</h2>
+<header1>
+  <h2>Anxiety - Depression - Insomnia</h2>
+</header1>
+
+<table>
+  <thead>
+    <tr> 
+      <th><a href="/sort/{{title}}?sort=tag&order={{ order }}">ID</a></th>
+      <th><a href="/sort/{{title}}?sort=tag&order={{ order }}">Age</a></th>
+      <th><a href="/sort/{{title}}?sort=tag&order={{ order }}">Primary Streaming Service</a></th>
+      <th><a href="/sort/{{title}}?sort=tag&order={{ order }}">Hours per day</a></th>
+    </tr>    
+  </thead>
+  <tbody>
+    {% for ID in tags %}
+    <tr>
+      <td>{{ ID[0] }}</td>
+      <td>{{ ID[1] }}</td>
+      <td>{{ ID[2] }}</td>
+      <td>{{ ID[3] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  
+</table>
+
+<p>This page shows the ID and on a scale of one to ten whether the person has anxiety, depression and/or insomnia.</p>
+
+
+
+
+{% endblock %} 
